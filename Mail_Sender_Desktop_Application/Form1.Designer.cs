@@ -52,7 +52,7 @@ namespace Mail_Sender_Desktop_Application
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bauhaus 93", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            this.label1.Location = new System.Drawing.Point(72, 107);
+            this.label1.Location = new System.Drawing.Point(80, 105);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 36);
             this.label1.TabIndex = 1;
@@ -81,9 +81,9 @@ namespace Mail_Sender_Desktop_Application
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(22, 318);
+            this.button1.Location = new System.Drawing.Point(12, 335);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(236, 30);
+            this.button1.Size = new System.Drawing.Size(268, 30);
             this.button1.TabIndex = 4;
             this.button1.Text = "LOG IN";
             this.button1.UseVisualStyleBackColor = false;
@@ -94,7 +94,7 @@ namespace Mail_Sender_Desktop_Application
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            this.label2.Location = new System.Drawing.Point(188, 299);
+            this.label2.Location = new System.Drawing.Point(188, 294);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 16);
             this.label2.TabIndex = 5;
@@ -180,7 +180,7 @@ namespace Mail_Sender_Desktop_Application
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Mail_Sender_Desktop_Application.Properties.Resources.PikPng_com_lock_icon_png_887846;
-            this.pictureBox1.Location = new System.Drawing.Point(87, 33);
+            this.pictureBox1.Location = new System.Drawing.Point(95, 21);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(87, 71);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

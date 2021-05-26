@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
 using System.Net.Mail;
+using System.Runtime.InteropServices;
 
 namespace Mail_Sender_Desktop_Application
 {
@@ -18,9 +19,26 @@ namespace Mail_Sender_Desktop_Application
         int movX;
         int movY;
 
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+       (
+           int nLeftRect,     // x-coordinate of upper-left corner
+           int nTopRect,      // y-coordinate of upper-left corner
+           int nRightRect,    // x-coordinate of lower-right corner
+           int nBottomRect,   // y-coordinate of lower-right corner
+           int nWidthEllipse, // height of ellipse
+           int nHeightEllipse // width of ellipse
+       );
+
+
         public Form2()
         {
             InitializeComponent();
+
+
+
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
+            //Form
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -137,16 +155,58 @@ namespace Mail_Sender_Desktop_Application
 
         private void panel1_MouseMove(object sender, MouseEventArgs e)
         {
-            if (mov ==1)
-            {
-                this.SetDesktopLocation(MousePosition.X - movX, MousePosition.Y - movY);
-
-            }
+            
         }
 
         private void panel1_MouseUp(object sender, MouseEventArgs e)
         {
             mov = 0;
         }
+
+        private void textmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form2_MouseDown(object sender, MouseEventArgs e)
+        {
+            mov = 1;
+            movX = e.X;
+            movY = e.Y;
+        }
+
+        private void Form2_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mov == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - movX, MousePosition.Y - movY);
+
+            }
+        }
+
+        private void Form2_MouseUp(object sender, MouseEventArgs e)
+        {
+            mov = 0;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ClearData();
+        }
+
+        private void ClearData()
+        {
+            textmail.Text = "";
+            txtsub.Text = "";
+            txtmsg.Text = "";
+
+
+        }
+
     }
 }
