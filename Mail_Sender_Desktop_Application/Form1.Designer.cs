@@ -37,7 +37,7 @@ namespace Mail_Sender_Desktop_Application
             this.label3 = new System.Windows.Forms.Label();
             this.txtusername = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtuser = new System.Windows.Forms.TextBox();
             this.txtpassword = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -87,6 +87,7 @@ namespace Mail_Sender_Desktop_Application
             this.button1.TabIndex = 4;
             this.button1.Text = "LOG IN";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -98,6 +99,7 @@ namespace Mail_Sender_Desktop_Application
             this.label2.Size = new System.Drawing.Size(92, 16);
             this.label2.TabIndex = 5;
             this.label2.Text = "Clear Fields";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -109,6 +111,7 @@ namespace Mail_Sender_Desktop_Application
             this.label3.Size = new System.Drawing.Size(33, 16);
             this.label3.TabIndex = 5;
             this.label3.Text = "Exit";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtusername
             // 
@@ -132,16 +135,16 @@ namespace Mail_Sender_Desktop_Application
             this.textBox1.Size = new System.Drawing.Size(195, 21);
             this.textBox1.TabIndex = 6;
             // 
-            // textBox2
+            // txtuser
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            this.textBox2.Location = new System.Drawing.Point(62, 208);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(195, 21);
-            this.textBox2.TabIndex = 6;
+            this.txtuser.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtuser.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtuser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
+            this.txtuser.Location = new System.Drawing.Point(62, 208);
+            this.txtuser.Multiline = true;
+            this.txtuser.Name = "txtuser";
+            this.txtuser.Size = new System.Drawing.Size(195, 21);
+            this.txtuser.TabIndex = 6;
             // 
             // txtpassword
             // 
@@ -191,7 +194,7 @@ namespace Mail_Sender_Desktop_Application
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(292, 447);
             this.Controls.Add(this.txtpassword);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtuser);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txtusername);
             this.Controls.Add(this.label3);
@@ -227,7 +230,7 @@ namespace Mail_Sender_Desktop_Application
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtusername;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtuser;
         private System.Windows.Forms.TextBox txtpassword;
     }
 }
