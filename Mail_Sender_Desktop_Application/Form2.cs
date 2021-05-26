@@ -219,8 +219,8 @@ namespace Mail_Sender_Desktop_Application
             string to, from, pass, messageBody;
             MailMessage message = new MailMessage();
             to = textmail.Text;
-            from = "stefnhokien@gmail.com";
-            pass = "ebtzshsnjlilyygk";
+            from = "<add your email address>";
+            pass = "<add email temporary app  password>";
             messageBody = txtmsg.Text;
             message.To.Add(to);
             message.From = new MailAddress(from);
