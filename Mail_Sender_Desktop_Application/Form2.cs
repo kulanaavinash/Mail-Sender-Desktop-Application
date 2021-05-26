@@ -16,5 +16,10 @@ namespace Mail_Sender_Desktop_Application
         {
             InitializeComponent();
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
