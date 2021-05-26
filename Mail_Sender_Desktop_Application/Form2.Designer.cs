@@ -52,6 +52,7 @@ namespace Mail_Sender_Desktop_Application
             this.txtmsg.Name = "txtmsg";
             this.txtmsg.Size = new System.Drawing.Size(242, 81);
             this.txtmsg.TabIndex = 23;
+            this.txtmsg.TextChanged += new System.EventHandler(this.txtmsg_TextChanged);
             // 
             // txtsub
             // 
@@ -76,6 +77,7 @@ namespace Mail_Sender_Desktop_Application
             this.textmail.Name = "textmail";
             this.textmail.Size = new System.Drawing.Size(242, 27);
             this.textmail.TabIndex = 25;
+            this.textmail.TextChanged += new System.EventHandler(this.textmail_TextChanged_1);
             // 
             // button1
             // 
@@ -90,6 +92,7 @@ namespace Mail_Sender_Desktop_Application
             this.button1.TabIndex = 22;
             this.button1.Text = "SEND MESSAGE";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // pictureBox1
             // 

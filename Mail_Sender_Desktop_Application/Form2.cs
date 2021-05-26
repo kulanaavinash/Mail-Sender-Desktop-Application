@@ -49,11 +49,12 @@ namespace Mail_Sender_Desktop_Application
 
         private void button1_Click(object sender, EventArgs e)
         {
+            /*
             string to, from, pass, messageBody;
             MailMessage message = new MailMessage();
             to = textmail.Text;
-            from = "";
-            pass = "";
+            from = "stefnhokien@gmail.com";
+            pass = "k.c.c11avinash1606";
             messageBody = txtmsg.Text;
             message.To.Add(to);
             message.From = new MailAddress(from);
@@ -83,7 +84,7 @@ namespace Mail_Sender_Desktop_Application
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
+            }*/
         }
 
         private void textmail_Enter(object sender, EventArgs e)
@@ -208,5 +209,53 @@ namespace Mail_Sender_Desktop_Application
 
         }
 
+        private void txtmsg_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            string to, from, pass, messageBody;
+            MailMessage message = new MailMessage();
+            to = textmail.Text;
+            from = "stefnhokien@gmail.com";
+            pass = "ebtzshsnjlilyygk";
+            messageBody = txtmsg.Text;
+            message.To.Add(to);
+            message.From = new MailAddress(from);
+            message.Body = "From : " + "<br>Message: " + messageBody;
+            message.Subject = txtsub.Text;
+            message.IsBodyHtml = true;
+            SmtpClient smtp = new SmtpClient("smtp.gmail.com");
+            smtp.EnableSsl = true;
+            smtp.Port = 587;
+            smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+            smtp.Credentials = new NetworkCredential(from, pass);
+
+            try
+            {
+                smtp.Send(message);
+                DialogResult code = MessageBox.Show("Email Sent Successfully", "Email Sent", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (code == DialogResult.OK)
+                {
+                    textmail.Clear();
+                    txtsub.Clear();
+                    txtmsg.Clear();
+
+                }
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void textmail_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
